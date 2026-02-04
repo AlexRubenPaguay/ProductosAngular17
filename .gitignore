@@ -40,3 +40,119 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Archivos y directorios generados por Angular
+/.angular/
+/dist/
+/tmp/
+/out-tsc/
+/bazel-out/
+
+# Dependencias de Node
+/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs de testing
+/junit.xml
+/test-results/
+
+# Archivos de entorno
+/.env
+/.env.local
+/.env.*.local
+
+# Configuraciones específicas de IDE
+/.idea/
+/.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Archivos de configuración de IDEs
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# Archivos de cobertura
+/coverage/
+*.lcov
+
+# Archivos de build
+/browser/
+/server/
+*.tgz
+
+# Archivos misceláneos
+*.log
+logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pids
+*.pid
+*.seed
+*.pid.lock
+lib-cov
+
+# Archivos de caché
+.cache/
+.parcel-cache/
+
+# Archivos de sistema
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Archivos de proyecto
+*.sublime-project
+*.sublime-workspace
+
+# Archivos de configuración de IDE
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Archivos de entorno de desarrollo
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Archivos de usuario
+.htaccess
+
+# Archivos de Vite (si usas Vite)
+/vite.config.js.timestamp-*
+/vite.config.js.timestamp-*
+
+# Archivos de Storybook
+/storybook-static/
+
+# Archivos de compilación específicos de Angular
+*.ngfactory.ts
+*.ngsummary.json
+*.ngstyle.ts
+*.metadata.json
+
+# Archivos de test
+/karma-*.log
+/cypress/videos/
+/cypress/screenshots/
+
+# Archivos de compilación SSR
+/server/
+/browser/
+
+# Archivos de caché de compilación
+/.angular/cache/
+/.vite/

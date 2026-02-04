@@ -1,0 +1,80 @@
+# Normalizar finales de línea
+* text=auto eol=lf
+
+# Archivos binarios
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.mov binary
+*.mp4 binary
+*.mp3 binary
+*.flv binary
+*.fla binary
+*.swf binary
+*.gz binary
+*.zip binary
+*.7z binary
+*.ttf binary
+*.eot binary
+*.woff binary
+*.woff2 binary
+
+# Archivos de configuración
+.gitattributes text
+.gitignore text
+.editorconfig text
+
+# Archivos TypeScript/JavaScript
+*.ts text
+*.js text
+*.json text
+*.html text
+*.css text
+*.scss text
+*.sass text
+*.less text
+
+# Archivos de Angular
+*.component.ts text
+*.service.ts text
+*.pipe.ts text
+*.directive.ts text
+*.module.ts text
+*.spec.ts text
+
+# Diferenciar linguajes para GitHub
+*.ts linguist-language=TypeScript
+*.js linguist-language=JavaScript
+*.html linguist-language=HTML
+*.css linguist-language=CSS
+*.scss linguist-language=SCSS
+*.json linguist-language=JSON
+
+# Evitar diffs en archivos minificados
+*.min.css -diff
+*.min.js -diff
+
+# Manejar archivos de bloqueo de paquetes
+package-lock.json binary
+yarn.lock binary
+
+# Archivos de configuración de Angular
+angular.json text
+tsconfig.json text
+tsconfig.app.json text
+tsconfig.spec.json text
+tsconfig.editor.json text
+
+# Configurar Git LFS para archivos grandes (opcional)
+#*.psd filter=lfs diff=lfs merge=lfs -text
+#*.ai filter=lfs diff=lfs merge=lfs -text
+#*.sketch filter=lfs diff=lfs merge=lfs -text
+
+# Archivos de entorno - pueden contener secrets
+.env binary
+.env.* binary
+
+# Markdown
+*.md text

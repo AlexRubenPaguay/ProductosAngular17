@@ -1,0 +1,84 @@
+<button (click)="openModal()" class="text-blue-500 border border-blue-500 bg-white active:hover:bg-blue-500 active:hover:text-white px-4 py-2 rounded
+    
+         transition-all duration-300 
+         hover:scale-105 
+         active:scale-95 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50
+         transform shadow-md hover:shadow-lg">
+    Editar
+</button>
+
+<!-- Modal de Flowbite (usando directivas de Angular) -->
+<div id="flowbite-modal" [class.hidden]="!isModalOpen" tabindex="-1"
+    class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+
+    <div class="relative bg-white ">
+        <!-- Body -->
+        <div class="p-4 md:p-5 space-y-3 text-left">
+            <!-- Formulario (solo lectura) -->
+            <div class="p-2 md:p-5 space-y-1 justify-center items-center">
+                <h3 class="text-xl font-bold justify-center items-center">Editar</h3>
+                <form class="max-w-md mx-auto" [formGroup]="producto" (ngSubmit)="submitProducto()">
+                    <div class="relative z-0 w-full mb-5 group">
+                        <input type="text" name="floating_nombre" id="floating_nombre" formControlName="nombre"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            placeholder=" " readonly/>
+                        <label for="floating_nombre"
+                            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Nombre</label>                        
+                    </div>
+                    <div class="relative z-0 w-full mb-5 group">
+                        <input type="number" name="floating_precio" id="floating_precio" step="1.1"
+                            formControlName="precio"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            placeholder=" " />
+                        <label for="floating_precio"
+                            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Precio</label>
+                        <!-- Mostramos el mensaje de error si el campo "nombre" es inválido y ha sido tocado -->
+                        @if (producto.get('precio')?.invalid && producto.get('precio')?.touched) {
+                        @if (producto.get('precio')?.errors) {
+                        <div class="text-red-500">El precio es requerido.</div>
+                        }
+                        }
+                    </div>
+                    <div class="grid md:grid-cols-2 md:gap-6">
+                        <div class="relative z-0 w-full mb-5 group">
+                            <input type="number" name="floating_stock" id="floating_stock" formControlName="stock"
+                                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                placeholder=" " />
+                            <label for="floating_stock"
+                                class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Stock</label>
+                            @if (producto.get('stock')?.invalid && producto.get('stock')?.touched) {
+                            @if (producto.get('stock')?.errors) {
+                            <div class="text-red-500">El stock es requerido.</div>
+                            }
+                            }
+                        </div>
+                        <div class="relative z-0 w-full mb-5 group">
+                            <input type="date" name="floating_date" id="floating_date" formControlName="fecha"
+                                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                placeholder=" " />
+                            <label for="floating_fecha"
+                                class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Fecha</label>
+                            @if (producto.get('fecha')?.invalid && producto.get('fecha')?.touched) {
+                            @if (producto.get('fecha')?.errors) {
+                            <div class="text-red-500">El fecha es requerido.</div>
+                            }
+                            }
+                        </div>
+                    </div>
+                    <!-- Footer -->
+                    <div class="flex justify-center p-4 md:p-5 border-t border-gray-200 rounded-b space-x-4">
+                        <button type="submit"
+                            class="text-white bg-blue-700 hover:bg-blue-800  font-medium rounded-lg text-sm w-full sm:w-auto px-4 py-2 ">Guardar</button>
+                        <button type="reset" (click)="closeModal()"
+                            class="text-black bg-white border border-gray-200 hover:text-gray-500   font-medium rounded-lg text-sm w-full sm:w-auto px-4 py-2 text-center ">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <!-- Botón para cerrar -->
+        <button type="reset" (click)="closeModal()" class="absolute top-3 right-3 text-gray-400 hover:text-gray-800">
+            ✕
+        </button>
+    </div>
+</div>
