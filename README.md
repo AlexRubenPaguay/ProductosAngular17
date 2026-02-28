@@ -1,27 +1,60 @@
-# ConsumoAPINetCore8
+# 🎬 App Gestíon de Productos - Angular 17
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.11.
+Aplicación web desarrollada con Angular 17 que consume API Rest en .Net 8 para crear, mostrar, eliminar,buscar y actualizar productos, utilizando TailWind+flowbite para el diseño responsivo.
 
-## Development server
+# Back-end para este proyecto
+https://github.com/AlexRubenPaguay/ProductosNET8_API
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## ✨ Características
 
-## Code scaffolding
+    ✅ Consumo de API REST 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+    ✅ Visualización de productos
+    
+    ✅ Crear, mostrar, eliminar,buscar y actualización de productos
 
-## Build
+    ✅ Búsqueda de productos por: nombre, precio, stock o fecha
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+    ✅ Diseño responsivo con TailWind+flowbite
 
-## Running unit tests
+    ✅ Interfaz moderna y amigable
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 🛠 Tecnologías Utilizadas
 
-## Running end-to-end tests
+    Angular 17 - Framework frontend
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+    TailWind+flowbite - Framework CSS
 
-## Further help
+    TypeScript - Superset tipado de JavaScript
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+    RxJS - Programación reactiva    
+
+## 📦 Requisitos Previos
+
+    Node.js (versión 16 o superior)
+
+    npm (versión 8 o superior)
+
+    Angular CLI 16
+
+    Visual Studio Code (recomendado)
+
+## 📸 Capturas de Pantalla
+
+<img width="1895" height="875" alt="imagen" src="https://github.com/user-attachments/assets/678d0e68-ad2c-4ae0-b275-9e80f6d2729b" />
+
+<img width="1897" height="871" alt="imagen" src="https://github.com/user-attachments/assets/87a99dbf-7be3-4aae-9078-f819676e758e" />
+
+<img width="1876" height="866" alt="imagen" src="https://github.com/user-attachments/assets/c6c3ae51-0709-4af1-b9f2-69384b8af56b" />
+
+<img width="1886" height="876" alt="imagen" src="https://github.com/user-attachments/assets/9d79ad32-3e2b-450a-aaa2-b200d35f84d0" />
+
+<img width="1908" height="872" alt="imagen" src="https://github.com/user-attachments/assets/e471ebbb-9d30-43b5-baaf-481185324ab8" />
+
+## 🙏 Agradecimientos    
+
+    Angular Team por el increíble framework
+
+    TailWind+flowbite por los componentes CSS
+
+⭐️ ¡No olvides darle una estrella al proyecto si te gustó! ⭐️
